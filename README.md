@@ -3,6 +3,7 @@ a custom maze generator made using python, the pygame module (and tkinter) and t
 this script let you made custom size mazes and visualize the process of making them
 
 ## Screenshots
+Coming Soon
 
 ## Changelog
 ### Version 0.5
