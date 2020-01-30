@@ -35,8 +35,8 @@ class Cell:
         if self.walls[3]:
             pygame.draw.line(screen, black, (x, y + w), (x, y), 2)
         if self.visited:
-            rect = pygame.Rect(x + 2, y + 2, w - 1, w - 1)
-            pygame.draw.rect(screen, white, rect)
+            rect = pygame.Rect(x + 2, y + 2, w, w)
+            pygame.draw.rect(screen, grey, rect)
 
     def checkNeighbors(self, grid, cols, rows):
         """
