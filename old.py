@@ -104,12 +104,12 @@ def cercaIndice(i,j):
 #----- Main
 makeGrid()
 
-current = grid[len(grid)-1]
+current = grid[0]
 #----- GameLoop
 run = True
 while run:
     clock = pygame.time.Clock()
-    clock.tick(2)
+    clock.tick(30)
     #pygame.time.delay(300)
     WIN.fill(WHITE)
     for i in range(len(grid)):
