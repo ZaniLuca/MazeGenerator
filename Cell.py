@@ -36,7 +36,13 @@ class Cell:
             rect = pygame.Rect(x + 2, y + 2, w - 1, w - 1)
             pygame.draw.rect(screen, white, rect)
 
-    def checkNeighbors(self, grid):
+    def search_index(self, i, j, grid):
+        for square in range(len(grid)):
+            if grid[square].i == i and grid[square].j == j:
+                return square
+        return -1
+
+    def checkNeighbors(self, grid, cols, rows):
         """
         check every neighbor around the selected cell
         and return a random one
@@ -44,11 +50,19 @@ class Cell:
         :return: random index
         """
         neighbors = []
-        # TODO get search index function from 1024.py
-        top = grid[cercaIndice(self.i, self.j - 1)]
-        right = grid[cercaIndice(self.i + 1, self.j)]
-        bottom = grid[cercaIndice(self.i, self.j + 1)]
-        left = grid[cercaIndice(self.i - 1, self.j)]
+        top = None
+        right = None
+        bottom = None
+        left = None
+
+        if self.i < cols - 1:
+            top = grid[self.i][self.j - 1]
+        if self.j < rows - 1:
+            right = grid[self.i + 1][self.j]
+        if self.i > 0:
+            bottom = grid[self.i][self.j + 1]
+        if self.j > 0:
+            left = grid[self.i - 1][self.j]
 
         if top and not top.visited:
             neighbors.append(top)

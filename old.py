@@ -106,14 +106,16 @@ makeGrid()
 
 current = grid[0]
 #----- GameLoop
+clock = pygame.time.Clock()
 run = True
 while run:
-    clock = pygame.time.Clock()
+
     clock.tick(30)
     #pygame.time.delay(300)
     WIN.fill(WHITE)
     for i in range(len(grid)):
         grid[i].show()
+
     current.visited = True
     current.highlight()
     next = current.checkNeighbors()
