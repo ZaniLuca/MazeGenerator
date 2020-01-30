@@ -5,6 +5,3 @@ this script let you made custom size mazes and visualize the process of making t
 ## Screenshots
 Coming Soon
 
-## Changelog
-### Version 0.5
-- initian commit

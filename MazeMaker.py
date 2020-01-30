@@ -5,9 +5,7 @@ made following TheCodingTrain tutorials
 https://www.youtube.com/user/shiffman
 """
 
-import pygame
 from Cell import *
-import random
 
 pygame.init()
 

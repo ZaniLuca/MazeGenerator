@@ -1,5 +1,7 @@
-import pygame
 import random
+
+import pygame
+
 from colors import *
 
 
@@ -46,6 +48,8 @@ class Cell:
         """
         check every neighbor around the selected cell
         and return a random one
+        :param rows: int
+        :param cols: int
         :param grid: grid
         :return: random index
         """
