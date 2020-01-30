@@ -43,6 +43,7 @@ class Game:
             if not self.done:
                 current.visited = True
                 current.highlight(self.screen, self.w)
+                pygame.display.update()
                 next_cell = current.checkNeighbors(self.grid, self.width // self.w, self.height // self.w)
 
                 if next_cell:
@@ -54,6 +55,8 @@ class Game:
 
                 elif len(self.stack) > 0:
                     current = self.stack.pop()
+                else:
+                    self.done = True
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

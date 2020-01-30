@@ -55,13 +55,13 @@ class Cell:
         bottom = None
         left = None
 
-        if self.i < cols - 1:
-            top = grid[self.i][self.j - 1]
-        if self.j < rows - 1:
-            right = grid[self.i + 1][self.j]
-        if self.i > 0:
-            bottom = grid[self.i][self.j + 1]
         if self.j > 0:
+            top = grid[self.i][self.j - 1]
+        if self.i < cols - 1:
+            right = grid[self.i + 1][self.j]
+        if self.j < rows - 1:
+            bottom = grid[self.i][self.j + 1]
+        if self.i > 0:
             left = grid[self.i - 1][self.j]
 
         if top and not top.visited:
