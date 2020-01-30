@@ -38,12 +38,6 @@ class Cell:
             rect = pygame.Rect(x + 2, y + 2, w - 1, w - 1)
             pygame.draw.rect(screen, white, rect)
 
-    def search_index(self, i, j, grid):
-        for square in range(len(grid)):
-            if grid[square].i == i and grid[square].j == j:
-                return square
-        return -1
-
     def checkNeighbors(self, grid, cols, rows):
         """
         check every neighbor around the selected cell
